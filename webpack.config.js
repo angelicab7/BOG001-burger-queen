@@ -1,15 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname),
-        filename: 'bundle.js',
-        publicPath: ''
+        path: path.resolve(__dirname, './dist'),
+        filename: '[name].bundle.js'
     },
-    devtool: 'cheap-module-eval-source-map',
     module: {
         rules: [
             {
@@ -39,6 +38,29 @@ module.exports = {
                 ]
             },
             {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    // Creates `style` nodes from JS strings
+                    'style-loader',
+                    // Translates CSS into CommonJS
+                    'css-loader',
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    [
+                                        'autoprefixer',
+                                    ],
+                                ],
+                            },
+                        },
+                    },
+                    // Compiles Sass to CSS
+                    'sass-loader',
+                ],
+            },
+            {
                 test: /\.(png|jpg|gif|svg)$/i, use: [
                     {
                         loader: 'url-loader',
@@ -51,12 +73,21 @@ module.exports = {
 
         ]
     },
+    devServer: {
+        historyApiFallback: true,
+        contentBase: path.resolve(__dirname, './dist'),
+        open: true,
+        compress: true,
+        hot: true,
+        port: 8080,
+    },
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: __dirname + '/src/index.html',
             filename: 'index.html',
             inject: 'body'
 
         })
-    ]
+    ],
 };

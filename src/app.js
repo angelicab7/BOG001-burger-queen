@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
-import Users from './containers/users';
-import Burger from './containers/burger';
+import Home from './containers/Home';
+import NotFoundPage from './containers/NotFound';
+import Waiter from './containers/Waiter';
+import Chef from './containers/Chef';
 
 class App extends Component {
-    render() {
-        return (
-            <div>
-                <div>
-                    <Link to='/'>Users</Link>
-                    <Link to='/burger'>Burger Queen</Link>
-                </div>
-                <div>
-                    <Route path='/' exact component={Users} />
-                    <Route path='/burger' component={Burger} />
-
-                </div>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/Waiter" exact component={Waiter} />
+        <Route path="/Chef" component={Chef} />
+        <Route component={NotFoundPage} />
+      </Switch>
+    );
+  }
 }
 
 export default App;
