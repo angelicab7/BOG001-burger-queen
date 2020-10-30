@@ -1,20 +1,18 @@
 .btn {
-    padding: 0.5rem 1.5rem;
-    border: none;
-    border-radius: 0.5rem;
-    background-color: rgba(0, 0, 0, 0);;
-    color:$fourth-color;
-    text-decoration: none;
-    font-size: 1.3rem;
-    letter-spacing: 0.2rem;
-    @media (min-width: 700px) {
-        padding: 0.8rem 3rem;
-      }
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+  @media (min-width: 700px) {
+    padding: 0.8rem 3rem;
+  }
 
-    &.primary {
-
-    }
-    &.secondary {
-
-    }
+  &.primary {
+    background-color: $main-color;
+    color: $fourth-color;
+  }
+  &.secondary {
+  }
 }
