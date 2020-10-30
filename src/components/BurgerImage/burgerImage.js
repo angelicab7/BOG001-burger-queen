@@ -1,6 +1,6 @@
 import React from 'react';
 
-import burgerImage from '../../assets/logoBQ.f69cefa4.svg';
+import burgerImage from '../../assets/7.jpg';
 
 const BurgerImage = () => (
   <div className="burgerImg">
