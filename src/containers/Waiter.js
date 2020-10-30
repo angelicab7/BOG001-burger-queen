@@ -5,7 +5,7 @@ class Waiter extends Component {
   render() {
     return (
       <div>
-        <h1>Waiter and chef!</h1>
+        <h1>CHOOSE YOUR OPTION</h1>
         <p>Awesome users on board!</p>
         <BurgerImage />
       </div>
