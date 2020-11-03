@@ -16,24 +16,15 @@
   color: white;
   letter-spacing: 0.5rem;
   font-weight: 200;
-  font-size: 1rem;
+  font-size: 0.7rem;
+  display: flex;
   justify-content: center;
-  padding: 2rem;
-
-  @media (min-width: 700px) {
-    padding: 7rem;
-  }
+  padding: 1rem;
 }
 .container-bottom {
   justify-content: center;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
-
-
-  @media (min-width: 700px) {
-    padding: 7rem;
-  }
 }
 
 .logo-pic {
@@ -49,7 +40,7 @@
   justify-content: center;
   align-items: center;
 
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     flex-direction: row;
     justify-content: stretch;
     align-items: stretch;
@@ -58,7 +49,7 @@
 }
 .left-container {
   width: 100%;
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     flex: 1 1 50%;
     display: flex;
     justify-content: center;
@@ -67,11 +58,11 @@
 }
 .right-container {
   width: 100%;
-  @media (min-width: 700px) {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 800px) {
     flex: 1 1 50%;
-    display: flex;
-    align-items: center;
-    display: inline-block;
-    padding: 3rem;
   }
 }

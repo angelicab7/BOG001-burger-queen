@@ -1,5 +1,6 @@
 // 1. Utils
 @import 'utils/variables';
+@import 'utils/utils';
 
 // 2. Base
 @import 'base/reset';
@@ -10,3 +11,4 @@
 
 // 4. Pages
 @import 'pages/home';
+@import 'pages/waiter';

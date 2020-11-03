@@ -1,0 +1,9 @@
+html{
+    background-color: $fourth-color;
+}
+.first-component{
+    color: $third-color;
+    display:flex;
+    justify-content: center;
+    letter-spacing: 0.2rem;
+}

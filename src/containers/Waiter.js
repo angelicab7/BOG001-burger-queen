@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
-import BurgerImage from '../components/BurgerImage/burgerImage';
 
-class Waiter extends Component {
-  render() {
-    return (
-      <div>
-        <h1>CHOOSE YOUR OPTION</h1>
-        <p>Awesome users on board!</p>
-        <BurgerImage />
-      </div>
-    );
-  }
-}
+const Waiter = () => (
+  <section className="inner-page">
+    <div className="first-component margin-t-3">
+      <h1>CHOOSE YOUR OPTION</h1>
+    </div>
+  </section>
+);
 
 export default Waiter;

@@ -12,15 +12,15 @@ const Home = () => (
       </div>
 
       <div className="right-container">
-        <div className="container-top margin-t-3">
+        <div className="container-top margin-t-3 text-centered">
           <h1>WELCOME BACK! PLEASE, CHOOSE YOUR ROL</h1>
         </div>
 
         <div className="container-bottom">
-          <a href="/Waiter">
+          <a href="/Waiter" className="p-all-1">
             <Button>WAITER</Button>
           </a>
-          <a href="/Chef">
+          <a href="/Chef" className="p-all-1">
             <Button>CHEF</Button>
           </a>
         </div>
