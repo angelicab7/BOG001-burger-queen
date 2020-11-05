@@ -1,9 +1,49 @@
-html{
-    background-color: $fourth-color;
+html {
+  background-color: $fourth-color;
 }
-.first-component{
-    color: $third-color;
-    display:flex;
-    justify-content: center;
-    letter-spacing: 0.2rem;
+.first-component {
+  color: $third-color;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.2rem;
+}
+.input-name {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+   @media (min-width: 800px) {
+    display: flex;
+    align-items: stretch;
+    justify-content: block;
+  }
+}
+.input-number {
+  margin-top: 2rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+
+    @media (min-width: 800px) {
+    display: flex;
+    align-items: stretch;
+    justify-content:block;
+  }
+}
+.name-input {
+  font-size: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px 5px 5px 5px;
+  flex: 1;
+  background-color: $second-color;
+  border: none;
+  width: 0.5rem;
+  @media (min-width: 800px) {
+    width: 0.1rem;
+  }
+}
+.select-input {
+  background-color: $second-color;
+  border: none;
+  border-radius: 5px 5px 5px 5px;
 }
