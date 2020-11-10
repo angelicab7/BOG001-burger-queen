@@ -1,15 +1,19 @@
-// 1. Utils
-@import 'utils/variables';
-@import 'utils/utils';
+// 1. Abstracts
+@import 'abstracts/variables';
 
 // 2. Base
 @import 'base/reset';
+@import 'base/helpers';
 
-// 3. Components
+// 3. Utils
+@import 'utils/utils';
+
+// 4. Components
+@import 'components/grid';
 @import 'components/burgerImage';
 @import 'components/button';
 @import 'components/container';
 
-// 4. Pages
+// 5. Pages
 @import 'pages/home';
 @import 'pages/waiter';
