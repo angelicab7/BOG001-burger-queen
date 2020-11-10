@@ -1,6 +1,10 @@
 // Utils
 .w100 {
-    width: 100%;
+  width: 100%;
+}
+
+.centered-text {
+  text-align: center;
 }
 
 @mixin margins($break: '') {

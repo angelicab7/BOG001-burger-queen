@@ -47,11 +47,20 @@ html {
   border: none;
   border-radius: 5px 5px 5px 5px;
 }
-.menu-box{
-    display: flex;
-    justify-content: space-evenly;
-
+.menu-box {
+  display: flex;
+  justify-content: space-evenly;
 }
-.choice-text{
-    
+.choice-text {
+}
+
+.menu-tab {
+  cursor: pointer;
+  &.selected {
+    border-bottom: 3px solid $main-color;
+  }
+}
+
+.menu-option {
+  padding: 0.5rem;
 }

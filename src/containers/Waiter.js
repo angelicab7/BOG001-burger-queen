@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from '../components/Container';
+import MenuSelector from '../components/MenuSelector/MenuSelector';
 
 const tableOptions = [
   {
@@ -54,32 +55,7 @@ const Waiter = () => (
           </select>
         </div>
       </form>
-      <div className="menu-box margin-t-three">
-        <div className="choice-text letter">
-          <h3>Breakfast</h3>
-          <ul>
-            <li className="row">
-              <span className="col-8">American Coffe</span>
-              <span className="col-4">$5</span>
-            </li>
-            <li className="row">
-              <span className="col-8">Milk Coffe</span>
-              <span className="col-4">$7</span>
-            </li>
-            <li className="row">
-              <span className="col-8">Ham and cheese sandwich</span>
-              <span className="col-4">$10</span>
-            </li>
-            <li className="row">
-              <span className="col-8">Natural juice fruit</span>
-              <span className="col-4">$7</span>
-            </li>
-          </ul>
-        </div>
-        <div className="choice-text letter">
-          <h3>Lunch/Dinner</h3>
-        </div>
-      </div>
+      <MenuSelector />
     </section>
   </Container>
 );

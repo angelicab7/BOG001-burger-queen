@@ -1,0 +1,74 @@
+[
+  {
+    "menuName": "Breakfast",
+    "menuId": "breakfast",
+    "menuOptions": [
+      {
+        "id": "bm1",
+        "name": "American coffee",
+        "price": 5
+      },
+      {
+        "id": "bm2",
+        "name": "Milk coffee",
+        "price": 7
+      },
+      {
+        "id": "bm3",
+        "name": "Ham and Cheese Sandwich",
+        "price": 10
+      },
+      {
+        "id": "bm4",
+        "name": "Natural Juice fruit",
+        "price": 7
+      }
+    ]
+  },
+  {
+    "menuName": "Lunch / Dinner",
+    "menuId": "lunch",
+    "menuOptions": [
+      {
+        "id": "lm1",
+        "name": "Cheese Burger",
+        "price": 10
+      },
+      {
+        "id": "lm2",
+        "name": "Double cheese burger",
+        "price": 10
+      },
+      {
+        "id": "lm3",
+        "name": "Fries",
+        "price": 5
+      },
+      {
+        "id": "lm4",
+        "name": "Onion rings",
+        "price": 5
+      },
+      {
+        "id": "lm5",
+        "name": "Water 500ml",
+        "price": 5
+      },
+      {
+        "id": "lm6",
+        "name": "Water 750ml",
+        "price": 7
+      },
+      {
+        "id": "lm7",
+        "name": "Soda 500ml",
+        "price": 5
+      },
+      {
+        "id": "lm8",
+        "name": "Soda 750ml",
+        "price": 10
+      }
+    ]
+  }
+]
