@@ -42,7 +42,8 @@
       {
         "id": "lm3",
         "name": "Fries",
-        "price": 5
+        "price": 5,
+        "icon":"fries"
       },
       {
         "id": "lm4",
@@ -52,12 +53,14 @@
       {
         "id": "lm5",
         "name": "Water 500ml",
-        "price": 5
+        "price": 5,
+        "icon": "water"
       },
       {
         "id": "lm6",
         "name": "Water 750ml",
-        "price": 7
+        "price": 7,
+        "icon": "water"
       },
       {
         "id": "lm7",

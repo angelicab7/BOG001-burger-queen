@@ -1,10 +1,20 @@
 import React from 'react';
 import sodaIcon from '../assets/icons/soda-icon.svg';
+import waterIcon from '../assets/icons/Water-icon.svg';
+import friesIcon from '../assets/icons/fries-icon.svg';
 
 const icons = {
   soda: {
     path: sodaIcon,
     displayName: 'Soda',
+  },
+  water: {
+    path: waterIcon,
+    displayName: 'Water',
+  },
+  fries: {
+    path: friesIcon,
+    displayName: 'Fries',
   },
 };
 
@@ -14,7 +24,7 @@ const Marks = ({ name, className }) => {
   return (
     <img
       className={`marks-icon ${className}`}
-      width={32}
+      width={48}
       src={icon.path}
       alt={`${icon.displayName} icon`}
     />
