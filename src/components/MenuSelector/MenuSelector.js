@@ -6,6 +6,7 @@ import MenuOption from './MenuOption';
 const MenuSelector = ({ onAdd }) => {
   const [selectedMenu, setSelectedMenu] = useState(menuOptionsData[0].menuId);
 
+  console.log(menuOptionsData, '--------------')
   const onSelect = (menuId) => {
     setSelectedMenu(menuId);
   };
