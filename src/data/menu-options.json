@@ -6,22 +6,26 @@
       {
         "id": "bm1",
         "name": "American coffee",
-        "price": 5
+        "price": 5,
+        "icon": "coffee"
       },
       {
         "id": "bm2",
         "name": "Milk coffee",
-        "price": 7
+        "price": 7,
+        "icon": "coffee"
       },
       {
         "id": "bm3",
         "name": "Ham and Cheese Sandwich",
-        "price": 10
+        "price": 10,
+        "icon": "sandwich"
       },
       {
         "id": "bm4",
         "name": "Natural Juice fruit",
-        "price": 7
+        "price": 7,
+        "icon": "juice"
       }
     ]
   },
@@ -32,23 +36,26 @@
       {
         "id": "lm1",
         "name": "Cheese Burger",
-        "price": 10
+        "price": 10,
+        "icon": "burger"
       },
       {
         "id": "lm2",
         "name": "Double cheese burger",
-        "price": 10
+        "price": 10,
+        "icon": "burger"
       },
       {
         "id": "lm3",
         "name": "Fries",
         "price": 5,
-        "icon":"fries"
+        "icon": "fries"
       },
       {
         "id": "lm4",
         "name": "Onion rings",
-        "price": 5
+        "price": 5,
+        "icon": "onions"
       },
       {
         "id": "lm5",

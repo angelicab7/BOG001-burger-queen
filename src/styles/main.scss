@@ -5,15 +5,16 @@
 @import 'base/reset';
 @import 'base/helpers';
 
-// 3. Utils
-@import 'utils/utils';
-
-// 4. Components
+// 3. Components
 @import 'components/grid';
 @import 'components/burgerImage';
 @import 'components/button';
 @import 'components/container';
 
-// 5. Pages
+// 4. Pages
 @import 'pages/home';
 @import 'pages/waiter';
+
+
+// 5. Utils
+@import 'utils/utils';
