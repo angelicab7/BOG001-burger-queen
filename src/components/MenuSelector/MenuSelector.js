@@ -6,7 +6,7 @@ import MenuOption from './MenuOption';
 const MenuSelector = ({ onAdd }) => {
   const [selectedMenu, setSelectedMenu] = useState(menuOptionsData[0].menuId);
 
-  console.log(menuOptionsData, '--------------')
+  console.log(menuOptionsData, '--------------');
   const onSelect = (menuId) => {
     setSelectedMenu(menuId);
   };
@@ -18,8 +18,14 @@ const MenuSelector = ({ onAdd }) => {
         <ul>
           {menuOptionsData
             .find(({ menuId }) => selectedMenu === menuId)
-            .menuOptions.map(({ id, name, price }) => (
-              <MenuOption key={id} name={name} price={price} onAdd={onAdd} />
+            .menuOptions.map(({ id, name, price, icon }) => (
+              <MenuOption
+                key={id}
+                name={name}
+                price={price}
+                onAdd={onAdd}
+                icon={icon}
+              />
             ))}
         </ul>
       </div>

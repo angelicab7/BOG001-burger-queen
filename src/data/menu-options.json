@@ -62,12 +62,14 @@
       {
         "id": "lm7",
         "name": "Soda 500ml",
-        "price": 5
+        "price": 5,
+        "icon": "soda"
       },
       {
         "id": "lm8",
         "name": "Soda 750ml",
-        "price": 10
+        "price": 10,
+        "icon": "soda"
       }
     ]
   }

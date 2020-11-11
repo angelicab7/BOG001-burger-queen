@@ -1,8 +1,12 @@
 import React from 'react';
+import Marks from '../Marks';
 
-const MenuOption = ({ name, price, onAdd }) => (
+const MenuOption = ({ name, price, onAdd, icon }) => (
   <li className="row menu-option">
-    <span className="col-7 padding-r-one">{name}</span>
+    <div className="col-7 padding-r-one d-flex align-items-center">
+      {icon && <Marks name={icon} className="margin-r-one" />}
+      <span>{name}</span>
+    </div>
     <span className="col-3 padding-r-one">
       {new Intl.NumberFormat('en-US', {
         style: 'currency',
