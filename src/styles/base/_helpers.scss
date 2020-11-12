@@ -7,6 +7,14 @@
   text-align: center;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.spaced-text {
+  letter-spacing: 0.2rem;
+}
+
 // Spacings
 @mixin margins($break: '') {
   .margin {
