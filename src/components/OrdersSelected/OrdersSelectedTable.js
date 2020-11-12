@@ -4,12 +4,13 @@ import React from 'react';
 import OrdersSelected from './OrdersSelected';
 
 const OrdersSelectedTable = ({ ordersSelected }) => (
-  <section className="row items-selected margin-t-three padding-x-one padding-y-one">
+  <section className="row items-selected margin-t-three padding-x-one padding-y-one margin-b-3">
     <div className="col-12">
-      <h3 className="text-centered">Selected items</h3>
+      <h3 className="text-centered first-component">SELECT ITEMS</h3>
     </div>
     <OrdersSelected ordersSelected={ordersSelected} />
     <div className="total-line-divisor" />
+    <h3 className="first-component">TOTAL:</h3>
   </section>
 );
 

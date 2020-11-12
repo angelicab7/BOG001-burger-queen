@@ -19,7 +19,7 @@ const MenuTabs = ({ onSelect, selectedMenu }) => {
           onClick={() => onClick(menuId)}
           onKeyPress={() => onClick(menuId)}
         >
-          <h3 className="centered-text">{menuName}</h3>
+          <h3 className="centered-text uppercase spaced-text">{menuName}</h3>
         </div>
       ))}
     </div>

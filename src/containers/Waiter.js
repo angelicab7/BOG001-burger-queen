@@ -42,13 +42,13 @@ const Waiter = () => {
           <h1>CHOOSE YOUR OPTION</h1>
         </div>
         <form className="row margin-t-one">
-          <div className=" first-container first-component col-12 col-8-md padding-r-md-two">
+          <div className=" first-container first-component col-12 col-8-md padding-r-md-two d-flex align-items-center">
             <label htmlFor="user-name" className="letter">
               Name:
             </label>
             <input type="name" name="user-name" className="name-input" />
           </div>
-          <div className=" second-container first-component col-12 col-4-md margin-t-two margin-t-md-zero">
+          <div className=" second-container first-component col-12 col-4-md margin-t-two margin-t-md-zero d-flex align-items-center">
             <label htmlFor="table-name" className="first-component letter">
               Table:
             </label>
