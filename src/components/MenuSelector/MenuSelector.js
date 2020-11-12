@@ -25,6 +25,7 @@ const MenuSelector = ({ onAdd }) => {
                 price={price}
                 onAdd={onAdd}
                 icon={icon}
+                orderId={id}
               />
             ))}
         </ul>
