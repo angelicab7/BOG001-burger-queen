@@ -8,6 +8,7 @@ const MenuOption = ({ name, price, onAdd, icon, orderId }) => {
       price,
       icon,
       id: orderId,
+      quantity: 1,
     });
   };
 

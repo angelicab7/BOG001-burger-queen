@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Container from '../components/Container';
 import MenuSelector from '../components/MenuSelector/MenuSelector';
 import OrdersSelectedTable from '../components/OrdersSelected/OrdersSelectedTable';
+import Button from '../components/Button';
 
 const tableOptions = [
   {
@@ -32,7 +33,35 @@ const Waiter = () => {
   const [ordersSelected, setOrdersSelected] = useState([]);
 
   const onAdd = (order) => {
-    setOrdersSelected([...ordersSelected, order]);
+    const isTheMenuAddedBefore = ordersSelected.some(
+      (orderSelected) => orderSelected.id === order.id,
+    );
+    if (isTheMenuAddedBefore) {
+      const newOrdersSelected = ordersSelected.map((orderSelected) => {
+        if (orderSelected.id === order.id) {
+          return {
+            ...orderSelected,
+            quantity: orderSelected.quantity + 1,
+          };
+        }
+        return orderSelected;
+      });
+      setOrdersSelected(newOrdersSelected);
+    } else {
+      const newOrdersSelected = [...ordersSelected, order];
+      setOrdersSelected(newOrdersSelected);
+    }
+  };
+
+  const onDelete = (id) => {
+    const newOrdersSelected = ordersSelected.filter((order) => {
+      if (order.id === id) {
+        return false;
+      }
+      return true;
+    });
+
+    setOrdersSelected(newOrdersSelected);
   };
 
   return (
@@ -66,7 +95,13 @@ const Waiter = () => {
           </div>
         </form>
         <MenuSelector onAdd={onAdd} />
-        <OrdersSelectedTable ordersSelected={ordersSelected} />
+        <OrdersSelectedTable
+          ordersSelected={ordersSelected}
+          onDelete={onDelete}
+        />
+        <div className="w100 d-flex justify-content-center padding-y-one padding-x-one">
+          <Button>CREATE ORDER</Button>
+        </div>
       </section>
     </Container>
   );
