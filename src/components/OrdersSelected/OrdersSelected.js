@@ -15,7 +15,7 @@ const OrdersSelected = ({ ordersSelected, onDelete }) => (
           {new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: 'USD',
-          }).format(price)}
+          }).format(price * quantity)}
         </span>
         <i
           className="fas fa-trash col-2 d-flex align-items-center"

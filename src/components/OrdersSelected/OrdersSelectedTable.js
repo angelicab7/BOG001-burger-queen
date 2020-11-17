@@ -17,7 +17,8 @@ const OrdersSelectedTable = ({ ordersSelected, onDelete }) => {
       </div>
       <OrdersSelected ordersSelected={ordersSelected} onDelete={onDelete} />
       <div className="total-line-divisor" />
-      <h3 className="first-component">{`TOTAL: ${new Intl.NumberFormat(
+      <div className="col-7" />
+      <h3 className="spaced-text col-5">{`TOTAL: ${new Intl.NumberFormat(
         'en-US',
         {
           style: 'currency',
