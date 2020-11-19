@@ -5,6 +5,7 @@ import Container from '../components/Container';
 import MenuSelector from '../components/MenuSelector/MenuSelector';
 import OrdersSelectedTable from '../components/OrdersSelected/OrdersSelectedTable';
 import Button from '../components/Button';
+import NavMenu from '../components/NavMenu';
 
 const tableOptions = [
   {
@@ -65,45 +66,48 @@ const Waiter = () => {
   };
 
   return (
-    <Container>
-      <section className="inner-page">
-        <div className="first-component margin-t-three">
-          <h1>CHOOSE YOUR OPTION</h1>
-        </div>
-        <form className="row margin-t-one">
-          <div className=" first-container first-component col-12 col-8-md padding-r-md-two d-flex align-items-center">
-            <label htmlFor="user-name" className="letter">
-              Name:
-            </label>
-            <input type="name" name="user-name" className="name-input" />
+    <>
+      <Container>
+        <section className="inner-page">
+          <div className="first-component margin-t-three">
+            <h1>CHOOSE YOUR OPTION</h1>
           </div>
-          <div className=" second-container first-component col-12 col-4-md margin-t-two margin-t-md-zero d-flex align-items-center">
-            <label htmlFor="table-name" className="first-component letter">
-              Table:
-            </label>
-            <select
-              className="select-input w100"
-              name="table-name"
-              aria-labelledby="table-name"
-            >
-              {tableOptions.map(({ value, text }) => (
-                <option key={value} value={value}>
-                  {text}
-                </option>
-              ))}
-            </select>
+          <form className="row margin-t-one">
+            <div className=" first-container first-component col-12 col-8-md padding-r-md-two d-flex align-items-center">
+              <label htmlFor="user-name" className="letter">
+                Name:
+              </label>
+              <input type="name" name="user-name" className="name-input" />
+            </div>
+            <div className=" second-container first-component col-12 col-4-md margin-t-two margin-t-md-zero d-flex align-items-center">
+              <label htmlFor="table-name" className="first-component letter">
+                Table:
+              </label>
+              <select
+                className="select-input w100"
+                name="table-name"
+                aria-labelledby="table-name"
+              >
+                {tableOptions.map(({ value, text }) => (
+                  <option key={value} value={value}>
+                    {text}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </form>
+          <MenuSelector onAdd={onAdd} />
+          <OrdersSelectedTable
+            ordersSelected={ordersSelected}
+            onDelete={onDelete}
+          />
+          <div className="w100 d-flex justify-content-center padding-y-one padding-x-one">
+            <Button>CREATE ORDER</Button>
           </div>
-        </form>
-        <MenuSelector onAdd={onAdd} />
-        <OrdersSelectedTable
-          ordersSelected={ordersSelected}
-          onDelete={onDelete}
-        />
-        <div className="w100 d-flex justify-content-center padding-y-one padding-x-one">
-          <Button>CREATE ORDER</Button>
-        </div>
-      </section>
-    </Container>
+        </section>
+      </Container>
+      <NavMenu />
+    </>
   );
 };
 

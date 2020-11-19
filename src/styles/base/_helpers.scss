@@ -13,6 +13,7 @@
 
 .spaced-text {
   letter-spacing: 0.2rem;
+  color: $third-color;
 }
 
 // Spacings
@@ -21,6 +22,9 @@
     &-all#{if($break != "", -#{$break}, "")} {
       &-zero {
         margin: 0;
+      }
+      &-half {
+        margin: 0.5rem;
       }
       &-one {
         margin: 1rem;
@@ -36,6 +40,10 @@
       &-zero {
         margin-top: 0;
         margin-bottom: 0;
+      }
+      &-half {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
       }
       &-one {
         margin-top: 1rem;
@@ -55,6 +63,10 @@
         margin-right: 0;
         margin-left: 0;
       }
+      &-half {
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+      }
       &-one {
         margin-right: 1rem;
         margin-left: 1rem;
@@ -72,6 +84,9 @@
       &-zero {
         margin-top: 0;
       }
+      &-half {
+        margin-top: 0.5rem;
+      }
       &-one {
         margin-top: 1rem;
       }
@@ -85,6 +100,9 @@
     &-b#{if($break != "", -#{$break}, "")} {
       &-zero {
         margin-bottom: 0;
+      }
+      &-half {
+        margin-bottom: 0.5rem;
       }
       &-one {
         margin-bottom: 1rem;
@@ -100,6 +118,9 @@
       &-zero {
         margin-left: 0;
       }
+      &-half {
+        margin-left: 0.5rem;
+      }
       &-one {
         margin-left: 1rem;
       }
@@ -113,6 +134,9 @@
     &-r#{if($break != "", -#{$break}, "")} {
       &-zero {
         margin-right: 0;
+      }
+      &-half {
+        margin-right: 0.5rem;
       }
       &-one {
         margin-right: 1rem;
@@ -133,6 +157,9 @@
       &-zero {
         padding: 0;
       }
+      &-half {
+        padding: 0.5rem;
+      }
       &-one {
         padding: 1rem;
       }
@@ -147,6 +174,10 @@
       &-zero {
         padding-top: 0;
         padding-bottom: 0;
+      }
+      &-half {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
       }
       &-one {
         padding-top: 1rem;
@@ -166,6 +197,10 @@
         padding-right: 0;
         padding-left: 0;
       }
+      &-half {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+      }
       &-one {
         padding-right: 1rem;
         padding-left: 1rem;
@@ -183,6 +218,9 @@
       &-zero {
         padding-top: 0;
       }
+      &-half {
+        padding-top: 0.5rem;
+      }
       &-one {
         padding-top: 1rem;
       }
@@ -196,6 +234,9 @@
     &-b#{if($break != "", -#{$break}, "")} {
       &-zero {
         padding-bottom: 0;
+      }
+      &-half {
+        padding-bottom: 0.5rem;
       }
       &-one {
         padding-bottom: 1rem;
@@ -211,6 +252,9 @@
       &-zero {
         padding-left: 0;
       }
+      &-half {
+        padding-left: 0.5rem;
+      }
       &-one {
         padding-left: 1rem;
       }
@@ -224,6 +268,9 @@
     &-r#{if($break != "", -#{$break}, "")} {
       &-zero {
         padding-right: 0;
+      }
+      &-half {
+        padding-right: 0.5rem;
       }
       &-one {
         padding-right: 1rem;

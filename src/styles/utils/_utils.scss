@@ -17,8 +17,17 @@
   display: flex;
 }
 
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .justify-content-center {
   justify-content: center;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
 }
 
 .align-items-center {
@@ -27,4 +36,8 @@
 
 .align-items-stretch {
   align-items: stretch;
+}
+
+.grow-1 {
+  flex-grow: 1;
 }
