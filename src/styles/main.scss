@@ -3,7 +3,6 @@
 
 // 2. Base
 @import 'base/reset';
-@import 'base/helpers';
 
 // 3. Components
 @import 'components/grid';
@@ -15,7 +14,9 @@
 // 4. Pages
 @import 'pages/home';
 @import 'pages/waiter';
+@import 'pages/chef';
 
 
 // 5. Utils
+@import 'base/helpers';
 @import 'utils/utils';

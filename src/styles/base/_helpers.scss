@@ -16,6 +16,21 @@
   color: $third-color;
 }
 
+.text-size {
+  &-small {
+    font-size: 0.7rem;
+  }
+  &-medium {
+    font-size: 1.5rem;
+  }
+  &-large {
+    font-size: 2rem;
+  }
+  &-huge {
+    font-size: 3rem;
+  }
+}
+
 // Spacings
 @mixin margins($break: '') {
   .margin {

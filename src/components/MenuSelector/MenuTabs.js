@@ -1,7 +1,6 @@
 import React from 'react';
-import menuOptionsData from '../../data/menu-options.json';
 
-const MenuTabs = ({ onSelect, selectedMenu }) => {
+const MenuTabs = ({ onSelect, selectedMenu, menuOptionsData }) => {
   const onClick = (menuId) => {
     onSelect(menuId);
   };

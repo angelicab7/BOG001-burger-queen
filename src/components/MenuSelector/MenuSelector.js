@@ -14,7 +14,11 @@ const MenuSelector = ({ onAdd }) => {
   return (
     <div className="menu-box margin-t-three">
       <div className="choice-text letter w100">
-        <MenuTabs onSelect={onSelect} selectedMenu={selectedMenu} />
+        <MenuTabs
+          onSelect={onSelect}
+          selectedMenu={selectedMenu}
+          menuOptionsData={menuOptionsData}
+        />
         <ul>
           {menuOptionsData
             .find(({ menuId }) => selectedMenu === menuId)
