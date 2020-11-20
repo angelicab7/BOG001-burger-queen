@@ -44,13 +44,13 @@ const Chef = () => {
 
   return (
     <>
-      <Container>
+      <Container className="margin-t-3">
         <MenuTabs
           menuOptionsData={menuOptions}
           selectedMenu={selectedMenu}
           onSelect={onSelect}
         />
-        <section className="row items-selected margin-t-3 padding-all-one">
+        <section className="row items-selected margin-t-3 padding-all-one text-color-third">
           <div className="col-12">
             <h3 className="text-centered first-component">
               ORDERS READY TO PREPARE

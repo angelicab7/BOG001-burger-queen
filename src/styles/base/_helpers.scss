@@ -31,6 +31,21 @@
   }
 }
 
+.text-color {
+  &-primary {
+    color: $main-color;
+  }
+  &-secondary {
+    color: $second-color;
+  }
+  &-third {
+    color: $third-color;
+  }
+  &-fourth {
+    color: $fourth-color;
+  }
+}
+
 // Spacings
 @mixin margins($break: '') {
   .margin {

@@ -1,5 +1,11 @@
 import React from 'react';
 
-const Container = ({ children }) => <div className="container">{children}</div>;
+const Container = ({ children, className }) => (
+  <div className={`container ${className}`}>{children}</div>
+);
+
+Container.defaultProps = {
+  className: '',
+};
 
 export default Container;

@@ -13,7 +13,7 @@ const MenuOption = ({ name, price, onAdd, icon, orderId }) => {
   };
 
   return (
-    <li className="row menu-option align-items-stretch">
+    <li className="row menu-option align-items-stretch text-color-third">
       <div className="col-7 padding-r-one d-flex align-items-center">
         {icon && <Marks name={icon} className="margin-r-one" />}
         <span>{name}</span>

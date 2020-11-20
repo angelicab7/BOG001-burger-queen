@@ -1,27 +1,24 @@
 import React from 'react';
-import Container from '../components/Container';
-import homeIcon from '../assets/icons/home-icon.svg';
-import waiterIcon from '../assets/icons/waiter-icon.svg';
-import chefIcon from '../assets/icons/chef-icon.svg';
+import Container from './Container';
 
 const menuItems = [
   {
     url: '/',
     id: 'home',
     text: 'Home',
-    icon: homeIcon,
+    icon: 'fas fa-home',
   },
   {
     url: '/Waiter',
     id: 'waiter',
     text: 'Waiter',
-    icon: waiterIcon,
+    icon: 'fas fa-utensils',
   },
   {
     url: '/Chef',
     id: 'chef',
     text: 'Chef',
-    icon: chefIcon,
+    icon: 'fas fa-concierge-bell',
   },
 ];
 
@@ -34,9 +31,9 @@ const NavMenu = () => (
             <li key={item.id} className="grow-1 d-flex justify-content-center">
               <a
                 href={item.url}
-                className="d-flex-column justify-content-space-between align-items-center"
+                className="d-flex-column justify-content-space-between align-items-center text-color-third"
               >
-                <img alt={item.text} src={item.icon} width={48} />
+                <i className={`${item.icon} text-size-medium`} />
                 <span className="margin-t-half">{item.text}</span>
               </a>
             </li>
