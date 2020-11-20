@@ -15,4 +15,22 @@
   }
   &.secondary {
   }
+
+  .spinner-border {
+    font-size: 0.5em;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    vertical-align: text-bottom;
+    border: 0.25em solid;
+    border-right: 0.25em solid transparent;
+    border-radius: 50%;
+    animation: spinner-border 0.75s linear infinite;
+  }
+}
+
+@keyframes spinner-border {
+  100% {
+    transform: rotate(1turn);
+  }
 }

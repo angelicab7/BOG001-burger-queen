@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Container from '../components/Container';
 import NavMenu from '../components/NavMenu';
 import MenuTabs from '../components/MenuSelector/MenuTabs';
-import Button from '../components/Button';
 import DeliverCard from '../components/DeliverCard';
 
 const menuOptions = [
