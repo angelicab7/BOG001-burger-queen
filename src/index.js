@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 
 import './styles/main.scss';
 import App from './app';
@@ -24,7 +26,20 @@ firebase.initializeApp(firebaseConfig);
 
 const app = (
   <BrowserRouter>
-    <App />
+    <>
+      <App />
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+    </>
   </BrowserRouter>
 );
 

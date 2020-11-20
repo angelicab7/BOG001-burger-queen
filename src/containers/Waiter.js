@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import firebase from 'firebase/app';
+import { toast } from 'react-toastify';
 
 // Components
 import Container from '../components/Container';
@@ -66,22 +67,35 @@ const Waiter = () => {
   };
 
   const onCreateOrder = () => {
-    setIsLoading(true);
-    const orderToSend = {
-      clientName: nameInputValue,
-      tableNumber: tableOptionsValue,
-      orderItems: ordersSelected,
-      totalPrice,
-      creationDate: firebase.firestore.Timestamp.now(),
-    };
+    if (!nameInputValue || !ordersSelected.length) {
+      if (!nameInputValue) {
+        toast.error('Please fill the client name');
+      }
+      if (!ordersSelected.length) {
+        toast.error('Please add at least one item to the order');
+      }
+    } else {
+      setIsLoading(true);
+      const orderToSend = {
+        clientName: nameInputValue,
+        tableNumber: tableOptionsValue,
+        orderItems: ordersSelected,
+        totalPrice,
+        creationDate: firebase.firestore.Timestamp.now(),
+      };
 
-    const db = firebase.firestore();
-    db.collection('orders')
-      .doc()
-      .set(orderToSend)
-      .then(() => {
-        setIsLoading(false);
-      });
+      const db = firebase.firestore();
+      db.collection('orders')
+        .doc()
+        .set(orderToSend)
+        .then(() => {
+          setIsLoading(false);
+          toast.success('Order created successfully');
+        })
+        .catch(() => {
+          toast.error('Something went wrong. Please try again.');
+        });
+    }
   };
 
   return (
