@@ -1,7 +1,13 @@
 import React from 'react';
-import Button from './Button';
+import Button from '../Button';
 
-const DeliverCard = ({ className, clientName, tableNumber, orderItems }) => (
+const DeliverCard = ({
+  className,
+  clientName,
+  tableNumber,
+  orderItems,
+  creationDate,
+}) => (
   <div className={`col-12 col-6-md col-4-lg padding-all-half ${className}`}>
     <div className="order-box padding-all-one">
       <div className="margin-b-one d-flex justify-content-space-between">
@@ -16,7 +22,10 @@ const DeliverCard = ({ className, clientName, tableNumber, orderItems }) => (
           </li>
         ))}
       </ul>
-      <div className="d-flex justify-content-end">
+      <div className="d-flex justify-content-space-between align-items-center">
+        <span className="margin-r-one">
+          {new Date(creationDate.toDate()).toLocaleString('en-US')}
+        </span>
         <Button className="padding-all-half">
           <i className="fas fa-check text-size-medium" />
         </Button>
