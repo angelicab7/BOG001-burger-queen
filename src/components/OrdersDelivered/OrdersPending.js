@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import firebase from 'firebase/app';
 
 // Components
@@ -8,20 +8,34 @@ const OrdersPending = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    const db = firebase.firestore();
-    db.collection('orders')
-      .get()
-      .then((querySnapshot) => {
-        const items = [];
-        querySnapshot.forEach((doc) => {
-          items.push({
-            id: doc.id,
-            ...doc.data(),
-          });
-        });
-        setOrders(items);
-      });
+    getOrders();
   }, []);
+
+  const getOrders = async () => {
+    const db = firebase.firestore();
+    const querySnapshot = await db.collection('orders').get();
+    const items = [];
+    querySnapshot.forEach((doc) => {
+      items.push({
+        id: doc.id,
+        ...doc.data(),
+      });
+    });
+    setOrders(items);
+  };
+
+  const pendingOrders = useMemo(
+    () => orders.filter(({ delivered }) => !delivered),
+    [orders],
+  );
+
+  const checkOrder = async (orderId) => {
+    const db = firebase.firestore();
+    await db.collection('orders').doc(orderId).update({
+      delivered: true,
+    });
+    getOrders();
+  };
 
   return (
     <section className="row items-selected margin-t-3 padding-all-one text-color-third">
@@ -30,7 +44,7 @@ const OrdersPending = () => {
           ORDERS READY TO PREPARE
         </h3>
       </div>
-      {orders.map(
+      {pendingOrders.map(
         ({
           id,
           clientName,
@@ -41,11 +55,13 @@ const OrdersPending = () => {
         }) => (
           <DeliverCard
             key={id}
+            orderId={id}
             clientName={clientName}
             tableNumber={tableNumber}
             totalPrice={totalPrice}
             orderItems={orderItems}
             creationDate={creationDate}
+            onClick={checkOrder}
           />
         ),
       )}
