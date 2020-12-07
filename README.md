@@ -50,12 +50,12 @@ Esta es la información que tenemos del cliente:
 
 ### PROTOTIPOS DE ALTA FIDELIDAD
 <div style="display: flex;">
-<img src="./src/assets/Home-prototype.PNG" width=400>
+<img src="./src/assets/Home-prototype.PNG" width=500>
 <br>
-<img src="./src/assets/Waiter-prototype.PNG" width=400>
-<img src="./src/assets/Waiter-prototype2.PNG" width=400>
-<img src="./src/assets/Chef-prototype.PNG" width=400>
-<img src="./src/assets/Chef-prototype2.PNG" width=400>
+<img src="./src/assets/Waiter-prototype.PNG" width=500>
+<img src="./src/assets/Waiter-prototype2.PNG" width=500>
+<img src="./src/assets/Chef-prototype.PNG" width=500>
+<img src="./src/assets/Chef-prototype2.PNG" width=500>
 </div>
 
 
