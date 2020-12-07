@@ -24,14 +24,16 @@ const MenuOption = ({ name, price, onAdd, icon, orderId }) => {
           currency: 'USD',
         }).format(price)}
       </span>
-      <i
-        className="fas fa-plus col-2 d-flex align-items-center"
+      <div
         onClick={onClick}
         onKeyPress={onClick}
         role="button"
         tabIndex={0}
         aria-label={`Add ${name} to the list`}
-      ></i>
+        className="d-flex align-items-center col-2"
+      >
+        <i className="fas fa-plus"></i>
+      </div>
     </li>
   );
 };

@@ -26,18 +26,23 @@ const tableOptions = [
 const WaiterForm = ({ onNameChange, onTableOptionChange }) => (
   <form className="row margin-t-one">
     <div className=" first-container first-component col-12 col-8-md padding-r-md-two d-flex align-items-center">
-      <label htmlFor="user-name" className="letter">
+      <label htmlFor="user-name" id="user-name" className="letter">
         Name:
       </label>
       <input
         type="name"
         name="user-name"
         className="name-input"
+        aria-labelledby="user-name"
         onChange={onNameChange}
       />
     </div>
     <div className=" second-container first-component col-12 col-4-md margin-t-two margin-t-md-zero d-flex align-items-center">
-      <label htmlFor="table-name" className="first-component letter">
+      <label
+        htmlFor="table-name"
+        id="table-name"
+        className="first-component letter"
+      >
         Table:
       </label>
       <select
