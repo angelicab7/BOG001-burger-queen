@@ -49,13 +49,14 @@ Esta es la información que tenemos del cliente:
 > 
 
 ### PROTOTIPOS DE ALTA FIDELIDAD
-
-<img src="./src/assets/Home-prototype.PNG" width=300>
+<div style="display: flex;">
+<img src="./src/assets/Home-prototype.PNG" width=400>
 <br>
-<img src="./src/assets/Waiter-prototype.PNG" width=300>
-<img src="./src/assets/Waiter-prototype2.PNG" width=300>
-<img src="./src/assets/Chef-prototype.PNG" width=300>
-<img src="./src/assets/Chef-prototype2.PNG" width=300>
+<img src="./src/assets/Waiter-prototype.PNG" width=400>
+<img src="./src/assets/Waiter-prototype2.PNG" width=400>
+<img src="./src/assets/Chef-prototype.PNG" width=400>
+<img src="./src/assets/Chef-prototype2.PNG" width=400>
+</div>
 
 
 
