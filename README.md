@@ -1,7 +1,7 @@
 # Burger Queen
 
   
-<img src="./src/assets/Burger-Queen-Logo-Black.png" width=400>
+<img src="./src/assets/Burger-Queen-Icon.png" width=400>
 
 ## Resumen del proyecto
 
