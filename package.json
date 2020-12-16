@@ -60,7 +60,8 @@
     "build": "webpack --config=webpack/webpack.prod.js",
     "test": "jest",
     "start": "webpack serve --config=webpack/webpack.dev.js",
-    "start:prod": "npm run build && serve dist --single"
+    "start:prod": "npm run build && serve dist --single",
+    "pretest": "eslint ."
   },
   "repository": {
     "type": "git",
